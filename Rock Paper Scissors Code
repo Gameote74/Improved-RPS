@@ -1,0 +1,20 @@
+#Rock Paper Scissors Game
+import random
+player = input ("Pick 'Rock', 'Paper', 'Scissors', 'Lizard', or 'Spock'")
+if player != 'Rock' and player != 'Paper' and player != 'Scissors' and player != 'Lizard' and player != 'Spock':
+    print("That is an invalid choice")
+choices = ['Rock', 'Paper', 'Scissors','Lizard','Spock']
+comp = random.choice(choices)
+if player == comp:
+    print("This was a draw")
+elif (player == 'Rock' and comp == 'Paper') or\
+    (player == 'Scissors' and comp == 'Spock') or\
+    (player == 'Paper' and comp == 'Scissors') or\
+    (player == 'Lizard' and comp =='Scissors') or\
+    (player == 'Lizard' and comp == 'Rock') or\
+    (player == 'Paper' and comp == 'Lizard') or\
+    (player == 'Spock' and comp == 'Lizard') or\
+    (player == 'Spock' and comp == 'Paper') or\
+    (player == 'Rock' and comp == 'Spock') or\
+    (player == 'Scissors' and comp == 'Rock'):
+    print("The computer wins!")
